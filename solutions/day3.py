@@ -2,8 +2,7 @@ import csv
 
 def parse_input():
     with open('../inputs/day3.input', newline='') as csvfile:
-        reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-        for row in reader: yield row[0]
+        for row in csv.reader(csvfile): yield row[0]
 
 def by_3(it):
     items = list(it)

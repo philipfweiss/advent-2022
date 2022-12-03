@@ -2,9 +2,7 @@ import csv
 
 def parse_input():
     with open('../inputs/day2.input', newline='') as csvfile:
-        reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
-        for row in reader:
-            yield row
+        for row in csv.reader(csvfile, delimiter=' '): yield row
 
 def round_score(first, second):
     points = { 'X': 1, 'Y': 2, 'Z': 3 }
