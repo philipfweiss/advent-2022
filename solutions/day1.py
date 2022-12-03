@@ -1,18 +1,12 @@
 import csv
+from itertools import groupby
 
 def parse_input():
     with open('../inputs/day1.input', newline='') as csvfile:
-        for row in csv.reader(csvfile): yield row
+        for row in csv.reader(csvfile): yield int(row[0]) if row else -1
 
 def elves():
-    elves, current_food = [], 0
-    for row in parse_input():
-        if len(row) == 0:
-            elves.append(current_food)
-            current_food = 0
-        else:
-            current_food += int(row[0])
-    return elves
+    return [sum(chunk) for is_chunk, chunk in groupby(parse_input(), key=lambda x: x>0) if is_chunk]
 
 def part_one():
     return max(elves())
