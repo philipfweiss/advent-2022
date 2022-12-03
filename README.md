@@ -6,9 +6,9 @@ I've never done advent of code before, but so far it seems pretty fun!
 
 Days completed so far:
 
-- [x] Dec 1
-- [x] Dec 2
-- [x] Dec 3
+- [x] [Dec 1](https://github.com/philipfweiss/advent-2022/blob/main/solutions/day1.py)
+- [x] [Dec 2](https://github.com/philipfweiss/advent-2022/blob/main/solutions/day2.py)
+- [x] [Dec 3](https://github.com/philipfweiss/advent-2022/blob/main/solutions/day3.py)
 - [ ] Dec 4
 - [ ] Dec 5
 - [ ] Dec 6
