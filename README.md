@@ -1,8 +1,17 @@
 ### Advent of Code 2022
 
-Hey! Here you'll find my submissions for the [Advent of Code 2022](https://adventofcode.com/).
+Here you'll find my submissions for the [Advent of Code 2022](https://adventofcode.com/).
 
 I've never done advent of code before, but so far it seems pretty fun!
+
+<hr>
+To run any of the solutions,
+
+```bash
+cd solutions
+python day1.py # replace 1 with whatever day you want to run
+```
+<hr>
 
 Days completed so far:
 
