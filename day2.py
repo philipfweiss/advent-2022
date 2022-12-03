@@ -1,9 +1,3 @@
-# First column: opponent's move (A, B, C)
-# Second column: what to play in response
-
-# Total score: sum of scores for each round
-# A -> 1, B -> 2, C -> 3 + Outcome (0, 3, 6)
-from ast import parse
 import csv
 
 def parse_input():
