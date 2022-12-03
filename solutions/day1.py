@@ -1,7 +1,7 @@
 import csv
 
 def parse_input():
-    with open('inputs/day1.input', newline='') as csvfile:
+    with open('../inputs/day1.input', newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
         for row in reader:
             yield row
@@ -23,4 +23,5 @@ def part_one():
 def part_two():
     return sum(list(reversed(sorted(elves())))[0:3])
 
-part_two()
+print(part_two())
+print(part_two())

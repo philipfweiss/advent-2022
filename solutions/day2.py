@@ -1,7 +1,7 @@
 import csv
 
 def parse_input():
-    with open('inputs/day2.input', newline='') as csvfile:
+    with open('../inputs/day2.input', newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
         for row in reader:
             yield row
@@ -33,3 +33,5 @@ def part_one():
 def part_two():
     return sum(round_2_score(*rnd) for rnd in parse_input())
 
+print(part_one())
+print(part_two())

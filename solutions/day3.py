@@ -1,7 +1,7 @@
 import csv
 
 def parse_input():
-    with open('inputs/day3.input', newline='') as csvfile:
+    with open('../inputs/day3.input', newline='') as csvfile:
         reader = csv.reader(csvfile, delimiter=' ', quotechar='|')
         for row in reader: yield row[0]
 
@@ -21,10 +21,11 @@ def common_three(rucksacks):
     first, second, third = rucksacks
     return min(set(first) & set(second) & set(third))
 
-def part_1():
+def part_one():
     return sum(priority(common(rucksack)) for rucksack in parse_input())
 
-def part_2():
+def part_two():
     return sum(priority(common_three(rucksacks)) for rucksacks in by_3(parse_input()))
 
-print(part_2())
+print(part_one())
+print(part_two())
