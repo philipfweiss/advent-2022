@@ -5,7 +5,7 @@ Here you'll find my submissions for the [Advent of Code 2022](https://adventofco
 I've never done advent of code before, but so far it seems pretty fun!
 
 <hr>
-To run any of the solutions,
+#### To run any of the solutions:
 
 ```bash
 cd solutions
@@ -13,7 +13,7 @@ python day1.py # replace 1 with whatever day you want to run
 ```
 <hr>
 
-Days completed so far:
+#### Days completed so far:
 
 - [x] [Dec 1](https://github.com/philipfweiss/advent-2022/blob/main/solutions/day1.py)
 - [x] [Dec 2](https://github.com/philipfweiss/advent-2022/blob/main/solutions/day2.py)
