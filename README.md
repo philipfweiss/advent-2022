@@ -19,7 +19,7 @@ python day1.py # replace 1 with whatever day you want to run
 - [x] [Dec 4](https://github.com/philipfweiss/advent-2022/blob/main/solutions/day4.py)
 - [x] [Dec 5](https://github.com/philipfweiss/advent-2022/blob/main/solutions/day5.py)
 - [x] [Dec 6](https://github.com/philipfweiss/advent-2022/blob/main/solutions/day6.py)
-- [ ] Dec 7
+- [x] [Dec 7](https://github.com/philipfweiss/advent-2022/blob/main/solutions/day7.py)
 - [ ] Dec 8
 - [ ] Dec 9
 - [ ] Dec 10
