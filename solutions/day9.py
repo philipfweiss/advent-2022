@@ -73,6 +73,13 @@ def parse_input():
             yield row[0].split()
 
 def part_one():
+    rp = RopePhysics(2)
+    for movement, amount in parse_input():
+        rp.move(movement, amount)
+    
+    print(len(rp.tail_positions))
+
+def part_two():
     rp = RopePhysics(10)
     for movement, amount in parse_input():
         rp.move(movement, amount)
@@ -80,3 +87,4 @@ def part_one():
     print(len(rp.tail_positions))
 
 part_one()
+part_two()
