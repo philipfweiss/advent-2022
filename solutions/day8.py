@@ -3,7 +3,7 @@ import numpy as np
 
 def parse_input():
     mtx = None
-    with open('../inputs/day8_small.input', newline='') as csvfile:
+    with open('../inputs/day8.input', newline='') as csvfile:
         for idx, row in enumerate(csv.reader(csvfile)): 
             if idx == 0:
                 N = len(row[0])
@@ -34,22 +34,29 @@ def part_one():
 def part_two():
     rot, N = parse_input()
     visible_trees = np.ones((N, N))
-
-    for _ in range(1):
-        # rot = np.rot90(rot)
+    for _ in range(4):
         visible_trees = np.rot90(visible_trees)
+        rot = np.rot90(rot)
         M, N = rot.shape
-
         for i in range(M):
-            max_so_far = rot[i, 0]
             for j in range(N):
-                if rot[i, j] > max_so_far:
-                    max_so_far = rot[i, j]
-                    visible_trees[i, j] *= j
-    print(rot)
-    print(visible_trees)
+                num_visible = 0
+                if j == 0:
+                    visible_trees[i, j] *= 0
+                else:
+                    for k in range(j):
+                        if rot[i, j] > rot[i, j-(k+1)]:
+                            num_visible+=1
+                        if rot[i, j] <= rot[i, j-(k+1)]:
+                            num_visible+= 1
+                            visible_trees[i, j] *= num_visible
+                            break
+                        if j-(k+1) == 0:
+                            visible_trees[i, j] *= num_visible
+                            break
 
     return np.max(visible_trees)
 
-
+# This one was hard! My solution is quite ugly.
+print(part_one())
 print(part_two())
